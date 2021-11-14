@@ -1,3 +1,3 @@
 export interface SearchContactsInPort {
-  execute(): Array<any>;
+  executeSearch(): Array<any>;
 }

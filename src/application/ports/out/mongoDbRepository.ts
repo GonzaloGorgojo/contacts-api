@@ -1,3 +1,7 @@
+import { Contact } from "../../../domain/contact";
+import { ContactsResult } from "../../../domain/contactResult";
+
 export interface MongoDbRepository {
-  getBooks(): Array<any>;
+  getContacts(): Array<any>;
+  createContact(contact: Contact): Promise<ContactsResult>;
 }
