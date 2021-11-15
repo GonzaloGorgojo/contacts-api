@@ -25,7 +25,7 @@ In the future i will build a mobile app to consume this Api.
 - TSyringe
 - Reflect-metadata
 
-### :wrench How To Use
+### :wrench: How To Use
 
 - Clone this repository (or fork, then clone your fork :) )
 - You will need `docker` installed in your pc
