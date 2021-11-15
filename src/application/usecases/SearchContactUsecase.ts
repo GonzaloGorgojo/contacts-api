@@ -12,7 +12,7 @@ export default class SearchContactsUseCase implements SearchContactsInPort {
     this.mongoDbRepository = mongoDbRepository;
   }
 
-  executeSearch() {
-    return this.mongoDbRepository.getContacts();
+  async executeSearch(): Promise<Array<any>> {
+    return await this.mongoDbRepository.getContacts();
   }
 }

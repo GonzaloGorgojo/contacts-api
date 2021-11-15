@@ -15,6 +15,7 @@ const app: Application = express();
 container.register("CreateContactInPort", { useClass: CreateContactUseCase });
 container.register("SearchContactsInPort", { useClass: SearchContactsUseCase });
 container.register("MongoDbRepository", { useClass: MongoDbAdapter });
+
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

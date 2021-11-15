@@ -15,7 +15,6 @@ export default class CreateContactUseCase implements CreateContactInPort {
   }
 
   executeCreation(contact: Contact): Promise<ContactsResult> {
-    console.log("caso de uso", contact);
     return this.mongoDbRepository.createContact(contact);
   }
 }
