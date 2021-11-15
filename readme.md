@@ -33,7 +33,7 @@ In the future i will build a mobile app to consume this Api.
 - Open a terminal and run this image of docker `sudo docker run -d -p 127.0.0.1:27017:27017/tcp -e MONGO_INITDB_ROOT_USERNAME=root -e MONGO_INITDB_ROOT_PASSWORD=root mongo`
 - Then you can check it out using `npm start`
 
-###:gear: Contribution
+### :gear: Contribution
 
 If you have any suggestions on what to improve in <em>this project</em> and would like to share them, feel free to leave an issue or fork project to implement your own ideas :slightly_smiling_face:
 
