@@ -1,10 +1,9 @@
 import { MongoDbRepository } from "../../application/ports/out/MongoDbRepository";
 import { injectable } from "tsyringe";
-import ContactSchema from "../../db/dbModel";
+import ContactSchema from "../../config/db/dbModel";
 import moment from "moment";
 import { Contact } from "../../domain/contact";
 import { ContactsResult } from "../../domain/contactResult";
-import GenericException from "../../exception/GenericException";
 
 @injectable()
 export default class MongoDbAdapter implements MongoDbRepository {
@@ -43,7 +42,7 @@ export default class MongoDbAdapter implements MongoDbRepository {
         }
       })
       .catch((err: any) => {
-        throw new GenericException(400, err.message);
+        return this.response("Bad Request", 400, err.message);
       });
   }
 
