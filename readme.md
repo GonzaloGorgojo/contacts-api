@@ -24,6 +24,7 @@ In the future i will build a mobile app to consume this Api.
 - Mongo/Mongoose
 - TSyringe
 - Reflect-metadata
+- Swagger
 
 ### :wrench: How To Use
 
@@ -31,7 +32,9 @@ In the future i will build a mobile app to consume this Api.
 - You will need `docker` installed in your pc
 - Run `npm i`
 - Open a terminal and run this image of docker `sudo docker run -d -p 127.0.0.1:27017:27017/tcp -e MONGO_INITDB_ROOT_USERNAME=root -e MONGO_INITDB_ROOT_PASSWORD=root mongo`
-- Then you can check it out using `npm start`
+- Then you can check it out using `npm dev`
+- In case you wanna use this without nodemon, run `npm build` then `npm start`
+- Bonus: you can go to http://localhost:5000/swagger/ and get the paths.
 
 ### :gear: Contribution
 
