@@ -6,8 +6,8 @@ import { Errors } from "../../../config/error/Errors";
 const createRequestSchema = Joi.object({
   name: Joi.string().required().min(3).max(15),
   lastName: Joi.string().required().min(3).max(15),
-  address: Joi.string().required().min(4).max(20),
-  number: Joi.string().required().min(8).max(15),
+  address: Joi.string().required().min(4).max(50),
+  number: Joi.string().required().min(8).max(20),
 });
 
 @injectable()
@@ -18,7 +18,7 @@ export class CreateRequestValidatorMiddleware {
       await createRequestSchema.validateAsync(req.body);
     } catch (error: any) {
       console.log("entro error");
-      next(Errors.badRequest(error.details[0].message));
+      await next(Errors.badRequest(error.details[0].message));
       return;
     }
   }
