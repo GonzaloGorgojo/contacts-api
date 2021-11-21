@@ -1,5 +1,3 @@
-# :warning: Currently under construccion :construction_worker:
-
 # Contacts Api :green_book:
 
 ### What is this :grey_question:
